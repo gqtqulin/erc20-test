@@ -7,12 +7,12 @@ import "./ERC20.sol";
 abstract contract ERC20Burnable is ERC20 {
 
     function burn(uint256 value) public virtual {
-        _burn(msg.sneder, value);
+        _burn(msg.sender, value);
     }
 
     function burnFrom(address count, uint256 value) public virtual {
-        _spendAllowance(account, msg.sender, value);
+        _spendAllowance(count, msg.sender, value);
 
-        _burn(account, value);
+        _burn(count, value);
     }
 }

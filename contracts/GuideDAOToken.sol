@@ -18,6 +18,7 @@ contract GuideDAOToken is ERC20, ERC20Burnable {
     constructor(
         address initialOwner
     ) ERC20("GuideDAOToken", "GUI") {
+        owner = initialOwner;
         _mint(msg.sender, 5 * 10 ** decimals());
     }
 

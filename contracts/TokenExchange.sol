@@ -14,6 +14,11 @@ contract TokenExchange {
         _;
     }
 
+    constructor(address _token) {
+        token = IERC20(_token);
+        owner = msg.sender;
+    }
+
     function buy() public payable {
         uint amount = msg.value; // wei
 

@@ -82,7 +82,7 @@ contract GuideShop {
         );
     }
 
-    function availableItems(uint _page, uint _count) external view returns(ItemsInStock[] memory) {
+    function availableItems(uint _page, uint _count) external view returns(ItemInStock[] memory) {
         require(_page > 0 && _count > 0);
 
         uint totalItems = uniqueIds.length;
